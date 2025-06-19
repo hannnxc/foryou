@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Untukmu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .glass {
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-radius: 20px;
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      padding: 30px;
+      max-width: 800px;
+      width: 90%;
+      color: #fff;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .hidden {
+      display: none;
+      opacity: 0;
+    }
+
+    .visible {
+      display: block;
+      opacity: 1;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    .intro {
+      text-align: center;
+    }
+
+    .intro img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 4px solid white;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      margin-bottom: 15px;
+    }
+
+    .btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 30px;
+      font-size: 18px;
+      background-color: #ff6b81;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #ff4757;
+      transform: scale(1.05);
+    }
+
+    .letter-content {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .letter-content img {
+      width: 200px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    .text {
+      flex: 1;
+      color: white;
+      font-size: 18px;
+      text-align: justify;
+    }
+
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    .nav-btn {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background-color: #ff6b81;
+      color: white;
+      border: none;
+      font-size: 22px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .nav-btn:hover {
+      background-color: #ff4757;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+<div id="intro" class="glass intro visible">
+  <img src="https://files.catbox.moe/0qt2v9.jpg" alt="Foto Hann">
+  <h2>Haii, aku hann 👋</h2>
+  <button class="btn" onclick="showPage(1)">Klik untuk melanjutkan..</button>
+</div>
+
+<!-- Halaman 1 -->
+<div id="page1" class="glass hidden">
+  <h2>Aku senang menulis tentangmu</h2>
+  <div class="text">
+    <p>Aku senang menulis dan mungkin juga kamu tahu itu, karena aku sering mencoba meraih perhatianmu lewat bait dan kata yang tertulis dengan manis serta sedikit puitis.</p>
+    <p>Dengan menulis aku bisa mengungkapkan semua yang aku rasakan termasuk cinta, walau tak terucap secara gamblang kepadamu.</p>
+    <p>Sejuta sayang untukmu mungkin tergambar jelas melalui tulisanku dan aku harap semua itu mampu sampai dan terbaca oleh hatimu.</p>
+  </div>
+  <div class="nav-buttons">
+    <button class="nav-btn" onclick="showPage(0)">‹</button>
+    <button class="nav-btn" onclick="showPage(2)">›</button>
+  </div>
+</div>
+
+<!-- Halaman 2 -->
+<div id="page2" class="glass hidden">
+  <div class="text">
+    <p>Surga amat nyata bagiku bila aku lihat cantiknya dirimu yang nyaris tak ada aura jahat yang menghantuimu.</p>
+    <p>Aku sering berkhayal untuk diberondong oleh barisan fotomu yang begitu cantik dan menggemaskan terkirim dan dilihat jelas olehku melalui media WhatsApp.</p>
+    <p>Semoga panjang umur kita berdua dan serta mulia langkah yang kita tempuh, walau saat ini semuanya masih jauh dari kata utuh.</p>
+    <p>Niatku untuk tulus mencintaimu tak kunjung usang dan aku yakin bahwa namamu akan selalu aku menanti, setidaknya kita menyatu dalam doa.</p>
+  </div>
+  <div class="nav-buttons">
+    <button class="nav-btn" onclick="showPage(1)">‹</button>
+    <button class="nav-btn" onclick="showPage(3)">›</button>
+  </div>
+</div>
+
+<!-- Halaman 3 -->
+<div id="page3" class="glass hidden">
+  <div class="letter-content">
+    <img src="https://files.catbox.moe/1zaeg5.jpg" alt="Foto Hann">
+    <div class="text">
+      <p>Mungkin kamu nggak sadar, tapi aku sering mendoakanmu dalam diam. Semoga harimu penuh tawa, semoga hatimu selalu bahagia, dan semoga semua langkahmu diberi kemudahan oleh Tuhan.</p>
+      <p>Dan kalau suatu saat nanti kita berjodoh, aku akan sangat bersyukur. Tapi jika tidak, aku tetap ingin kamu bahagia, dengan siapa pun pilihanmu nanti.</p>
+    </div>
+  </div>
+  <div class="nav-buttons">
+    <button class="nav-btn" onclick="showPage(2)">‹</button>
+    <button class="nav-btn" onclick="showPage(4)">›</button>
+  </div>
+</div>
+
+<!-- Halaman 4 -->
+<div id="page4" class="glass hidden">
+  <div class="letter-content">
+    <img src="https://files.catbox.moe/dbtp8a.jpg" alt="Foto Halaman 4">
+    <div class="text">
+      <p>Kamu adalah seseorang yang istimewa. Bahkan tanpa perlu berkata, kehadiranmu selalu mampu menciptakan ketenangan dalam hariku.</p>
+      <p>Mungkin semua ini hanya sebatas tulisan, namun percayalah, setiap kata yang kubuat berasal dari hati yang benar-benar ingin menyayangimu dengan tulus.</p>
+      <p>Aku tidak tahu ke mana arah kita, tapi selama kamu bahagia, aku akan selalu mendoakan dari jauh — dengan senyum yang sama saat pertama kali mengenalmu.</p>
+    </div>
+  </div>
+  <div class="nav-buttons">
+    <button class="nav-btn" onclick="showPage(3)">‹</button>
+  </div>
+</div>
+
+<audio id="backgroundAudio" autoplay loop>
+  <source src="https://files.catbox.moe/6x7jgh.mp3" type="audio/mp3">
+</audio>
+
+<script>
+  function showPage(page) {
+    for (let i = 0; i <= 4; i++) {
+      document.getElementById(i === 0 ? "intro" : "page" + i).classList.remove("visible");
+      document.getElementById(i === 0 ? "intro" : "page" + i).classList.add("hidden");
+    }
+    document.getElementById(page === 0 ? "intro" : "page" + page).classList.remove("hidden");
+    document.getElementById(page === 0 ? "intro" : "page" + page).classList.add("visible");
+
+    const audio = document.getElementById("backgroundAudio");
+    if (audio.paused) audio.play();
+  }
+</script>
+
+</body>
+</html>
